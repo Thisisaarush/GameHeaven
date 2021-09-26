@@ -28,7 +28,12 @@ const Nav = () => {
         <h1>Gaming Heaven</h1>
       </Logo>
       <form className="search">
-        <input value={textInput} onChange={inputHandler} type="text" />
+        <input
+          value={textInput}
+          onChange={inputHandler}
+          type="text"
+          placeholder="Search any game"
+        />
         <button onClick={submitSearch} type="submit">
           Search
         </button>
@@ -43,30 +48,32 @@ const StyledNav = styled(motion.nav)`
   input {
     width: 30%;
     font-size: 1.5rem;
+    font-weight: 500;
     padding: 0.5rem;
     border: none;
     margin-top: 1rem;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ff7676;
   }
   button {
     font-size: 1.5rem;
     border: none;
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 2rem;
     cursor: pointer;
     background: #ff7676;
     color: white;
+    border-radius: 0 10px 10px 0;
   }
 `;
 
 const Logo = styled(motion.div)`
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
-  img {
-    height: 2rem;
-    width: 2rem;
-  }
+  font-size: 4rem;
+  color: #ff7676;
 `;
 
 export default Nav;

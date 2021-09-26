@@ -49,7 +49,7 @@ const Home = () => {
         ) : (
           ""
         )}
-        <h2>Upcoming Games</h2>
+        <h2>Top 10 Upcoming Games</h2>
         <Games>
           {upcoming.map((game) => (
             <Game
@@ -61,7 +61,7 @@ const Home = () => {
             />
           ))}
         </Games>
-        <h2>Popular Games</h2>
+        <h2>Top 10 Popular Games</h2>
         <Games>
           {popular.map((game) => (
             <Game
@@ -73,7 +73,7 @@ const Home = () => {
             />
           ))}
         </Games>
-        <h2>New Games</h2>
+        <h2>Top 10 New Games</h2>
         <Games>
           {newGames.map((game) => (
             <Game
@@ -100,7 +100,7 @@ const GameList = styled(motion.div)`
 const Games = styled(motion.div)`
   min-height: 80vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
 `;
