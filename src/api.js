@@ -48,12 +48,12 @@ export const newGamesURL = () => {
 
 // Game Details
 export const gameDetailsURL = (game_id) => {
-  return `${base_url}games/${game_id}`;
+  return `${base_url}games/${game_id}?key=${API_KEY}`;
 };
 // Game Screenshot
 export const gameScreenshotURL = (game_id) => {
-  return `${base_url}games/${game_id}/screenshots`;
+  return `${base_url}games/${game_id}/screenshots?key=${API_KEY}`;
 };
 //Searched game
 export const searchGameURL = (game_name) =>
-  `${base_url}games?search=${game_name}&page_size=9`;
+  `${base_url}games?key=${API_KEY}&search=${game_name}&page_size=9`;
